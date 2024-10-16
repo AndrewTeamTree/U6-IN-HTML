@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Sofia&effect=fire" rel="stylesheet">
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
 </head>
 <body>
     <div id="my-info" class="sidebar">
@@ -30,6 +50,12 @@
         <div class="header">
             <div class="header-info-box">
                 <button id="menu-icon" class="menu-icon" type="button" data-toggle="my-info"></button>
+                <div class="dropdown">
+  <span>:)</span>
+  <div class="dropdown-content">
+  <p>Hello</p>
+  </div>
+</div>
                 <span>Andrew Stevens</span>
             </div>
         </div>
