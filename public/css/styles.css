@@ -328,10 +328,10 @@ nav a span {
 }
 
 .project-img {
-  width: 400px;
-  height: 400px;
+  width: 200vw;
+  height: 200vw;
   margin: 4vw 4vw 0 4vw;
-  border: 4px solid #646262;
+  border: 1vw solid #646262;
   
 }
 
