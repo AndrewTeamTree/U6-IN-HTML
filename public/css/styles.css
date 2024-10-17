@@ -126,7 +126,6 @@ nav a span {
 
 .sidebar .thumbnail {
   width: 100%;
-  max-width: 20vw;
   height: 40vw;
   border: 4px solid #fff;
 }
@@ -157,20 +156,31 @@ nav a span {
 }
 
 .header {
+  text-align: center;
   vertical-align: middle;
   color: #fefefe;
-  height: 40px;
   padding: 0.5rem;
   background: #0a0a0a;
-  border-left: 1px solid #0a0a0a;
+  border-left: 1px solid #f3eeee;
+}
+
+.header .z {
+  display: inline-block;
+  font-size: smaller
 }
 
 .header span {
   display: inline-block;
-  font-weight: bold;
+  font-weight: bolder;
+  
+  
+  
+  
+ 
 }
 
 .header button {
+  
   vertical-align: top;
   cursor: pointer;
   outline: none;
