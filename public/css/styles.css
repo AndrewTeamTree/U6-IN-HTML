@@ -125,8 +125,10 @@ nav a span {
 }
 
 .sidebar .thumbnail {
-  width: 60%;
-  height: 70%;
+   width: 80%;
+  height: 90%;
+  padding: 20px;
+  object-fit: cover; 
   border: 4px solid #fff;
 }
 
