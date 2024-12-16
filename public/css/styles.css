@@ -8,6 +8,9 @@
 
 
 body {
+  display: flex;
+  width: 100%;
+
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
@@ -18,9 +21,7 @@ body {
   transition: all 0.4s ease-out;
 }
 
-article {
-  background: #fefefe;
-}
+grid-item
 
 h1,h2,h3,h4,h5,p{
   font-family: 'Merriweather', serif;
@@ -45,10 +46,6 @@ p{
   color: #666;
 }
 
-a {
-  text-decoration: none;
-}
-
 .wrapper {
   width: 100%;
   min-width: 320px;
@@ -57,6 +54,38 @@ a {
   background: #fefefe;
 }
 
+.docu {
+  display: flex;
+  width: 98%;
+  padding: 8px; 
+  border-color: #000;
+  border: solid ;
+  border-width: .2vw;
+}
+
+.two-col1 {
+  margin-top: auto;
+  float: left;
+  grid-column: auto;
+  width: 60%;
+  padding-left: 4vw;
+  padding-top: 2vw;
+  display: flex;
+  
+}
+
+.two-col0 {
+  display: flex;
+  margin-top: auto;
+  padding-top: 2.5vw;
+  float: right;
+  grid-column: auto;
+  width: 40%;
+  padding-left: 4vw;
+  margin-bottom: 0%;
+}
+
+
 .flex-row-wrap {
   display: flex;
   flex-flow: row wrap;
@@ -64,15 +93,12 @@ a {
 }
 
 .grid {
+  padding-left: 10%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 30px;
 }
 
-.box {
-  max-width: 70%;  
-  background: #fefefe; 
-}
 
 
 
@@ -85,23 +111,6 @@ a {
 
 
 
-
-
-nav a {
-  width: 100%;
-  vertical-align: middle;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: #555; 
-}
-
-nav a span {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
 
 .sidebar {
   position: absolute;
@@ -157,7 +166,7 @@ nav a span {
 }
 
 .header {
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   color: #fefefe;
   padding: 0.5rem;
@@ -170,7 +179,7 @@ nav a span {
   font-size: smaller
 }
 
-.header span {
+.header  {
   display: inline-block;
   font-weight: bolder;
   
@@ -219,6 +228,7 @@ nav a span {
   border-width: .2vw;
 }
 
+
  
 /* Define a grid container for the images */
 .grid-container {
@@ -226,7 +236,7 @@ nav a span {
   grid-template-columns: repeat(3, 1fr); /* Three columns */
   grid-template-rows: repeat(2, 1fr); /* Two rows */
   gap: 10px; 
-  margin-top: 0%;
+  
   
     border: 10px dotted black;
     padding: 15px;
@@ -246,11 +256,6 @@ nav a span {
   border-color: #000;
 }
 
-.grid-item h3{
-  padding-left: 1vw;
-  text-align: left;
-  font-size: 1.0vw;
-}
 
 .grid-item h2{
   text-align: center;
@@ -262,7 +267,6 @@ nav a span {
 /* Ensure images fill the grid item */
 .grid-item img {
   width: 100%;
-  height: 100%;
   object-fit: cover; 
   border-color: #000;
 }
@@ -325,18 +329,17 @@ nav a span {
 .project-info-box p {
   font-size: 190%;
 }
-
-.nav2 {
-  width: 100%;
+a
+.nav {
+  color: #d8cccc;
+  font-weight: bolder;
+  width: 10%;
   float: left;
-  
+ 
+
 }
 
-.nav1 {
-  width: 100%;
-  float: left;
-  padding-right: 44%;
-}
+
 
 .project-img {
   width: 400px;
@@ -346,38 +349,7 @@ nav a span {
   
 }
 
-.two-col1 {
-  margin-top: auto;
-  float: left;
-  grid-column: auto;
-  width: 60%;
-  padding-left: 4vw;
-  padding-top: 2vw;
- 
-  
-}
 
-.two-col0 {
-  margin-right: 10%;
-  margin-top: auto;
-  padding-top: 2.5vw;
-  float: right;
-  grid-column: auto;
-  width: 30%;
-  padding-left: 4vw;
-  margin-bottom: 0%;
-}
-
-.nav3 {
-  width: 100%;
-  float: left;
-
-}
-
-.two-col {
-  float: right;
-  grid-column: auto;
-}
 
 .portfolio-about h1 {
   font-size: 260%;
@@ -480,60 +452,80 @@ nav a span {
 /* 
   Tablet layout styles 
 */
-@media screen and (min-width: 768px) {
-  .sidebar h5 {
-    font-size: 1.25rem;
-  }
-
+@media (max-width: 480px) {
+  
+ 
   .portfolio-intro h1 {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 
-  .box {
-    border-bottom: none;
-  }
+  .nav {
+    width: 10%;
+    float: left;
+   }
+ 
 
   .two-col .box:nth-of-type(1) {
-    width: 70%;
+    width: 90%;
     padding-right: 15px;
+    
+  }
+  .two-col .box:nth-of-type(2) {
+    width: 100%;
+    padding-left: 15px;
+    margin-right: 0%;
+    padding-right: 0%;
+  }
+
+ 
+.docu {
+  display: flex;
+  width: 90%;
+  padding: 8px; 
+  border-color: #000;
+  border: solid ;
+  border-width: .2vw;
+}
+
+  
+}
+
+@media screen and (max-width: 768px) {
+ 
+  
+  .portfolio-intro h1 {
+    font-size: 2rem;
+  }
+
+  
+.docu {
+  display: flex;
+  width: 95%;
+  padding: 8px; 
+  border-color: #000;
+  border: solid ;
+  border-width: .2vw;
+}
+
+  .two-col .box:nth-of-type(1) {
+    width: 100%;
+    padding-right: 15px;
+    
   }
   .two-col .box:nth-of-type(2) {
     width: 30%;
     padding-left: 15px;
+    margin-right: 0%;
+    padding-right: 0%;
   }
 
-  .cell {
-    margin: 0;
-  }
+  .nav {
+    width: 10%;
+    float: left;
+   }
 
-  .cell h5 {
-    font-size: 1.25rem;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+   
 }
 
 
-/* 
-  Desktop layout styles 
-*/
-@media screen and (min-width: 1024px) {
-  .sidebar {
-    left: 0;
-  }
 
-  .header {
-    display: none;
-  }
-
-  .wrapper {
-    margin-left: 300px;
-    width: calc(100% - 300px);
-  }
-
-  .inner-wrapper {
-    max-width: 1200px;
-  }
-}
